@@ -11,10 +11,10 @@ package common;
  */
 public class AppConfig {
 
-    public static String host = "13.76.5.217";
-    // public static String host = "localhost";
-    public static int port = 27017;
-    public static String dbName = "SWD391";
-    // mongo -u "dut -p "dut123" 13.76.5.217:27017/SWD391
-    // mongo 13.76.5.217:27017/SWD391 -u dut -p dut123
+	public static String host = "13.76.5.217";
+	// public static String host = "localhost";
+	public static int port = 27017;
+	public static String dbName = "SWD391";
+	// mongo -u "dut -p "dut123" 13.76.5.217:27017/SWD391
+	// mongo 13.76.5.217:27017/SWD391 -u dut -p dut123
 }

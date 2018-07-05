@@ -18,32 +18,33 @@ import entity.User;
  * @author Duc
  */
 public class GetDataFromMongoDBExample {
-    
-    public static void main(String[] args) {
-        try {
-            // Connect to db
-            MongoClient mongoClient = new MongoClient(AppConfig.host, AppConfig.port);
-            DB db = mongoClient.getDB(AppConfig.dbName);
-            LogSWD.d("Connected to DB");
 
-            // Get data, now Users have username, password and name (Users table called collection in Mongodb )
-            DBCollection userCollection = db.getCollection("Users");
+	public static void main(String[] args) {
+		try {
+			// Connect to db
+			MongoClient mongoClient = new MongoClient(AppConfig.host, AppConfig.port);
+			DB db = mongoClient.getDB(AppConfig.dbName);
+			LogSWD.d("Connected to DB");
 
-            // Example with 1 document (document is record in sql)
-            DBObject dbo = userCollection.findOne();
+			// Get data, now Users have username, password and name (Users table called
+			// collection in Mongodb )
+			DBCollection userCollection = db.getCollection("Users");
 
-            // Log all of it
-            if (dbo.get("username") == null || dbo.get("password") == null) {
-                LogSWD.e("Collection have not been init");
-            } else {
-                LogSWD.i(dbo.get("username") + " " + dbo.get("password"));
-                User u = new User(dbo);
-                if (u != null) {
-                    LogSWD.i(u.toString());
-                }
-            }
-        } catch (Exception e) {
-            LogSWD.e(e.getLocalizedMessage());
-        }
-    }
+			// Example with 1 document (document is record in sql)
+			DBObject dbo = userCollection.findOne();
+
+			// Log all of it
+			if (dbo.get("username") == null || dbo.get("password") == null) {
+				LogSWD.e("Collection have not been init");
+			} else {
+				LogSWD.i(dbo.get("username") + " " + dbo.get("password"));
+				User u = new User(dbo);
+				if (u != null) {
+					LogSWD.i(u.toString());
+				}
+			}
+		} catch (Exception e) {
+			LogSWD.e(e.getLocalizedMessage());
+		}
+	}
 }
