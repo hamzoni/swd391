@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package entity;
 
 import com.mongodb.DBObject;
 import common.Key;
@@ -12,22 +12,22 @@ import common.Key;
  *
  * @author Duc
  */
-public class Users {
+public class User {
 
     private String name;
     private String username;
     private String password;
 
-    public Users() {
+    public User() {
     }
 
-    public Users(String name, String username, String password) {
+    public User(String name, String username, String password) {
         this.name = name;
         this.username = username;
         this.password = password;
     }
 
-    public Users(DBObject userObject) {
+    public User(DBObject userObject) {
         if (userObject == null) {
             return;
         } else {

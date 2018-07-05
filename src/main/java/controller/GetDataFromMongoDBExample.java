@@ -11,7 +11,7 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import common.AppConfig;
 import common.LogSWD;
-import model.Users;
+import entity.User;
 
 /**
  *
@@ -37,7 +37,7 @@ public class GetDataFromMongoDBExample {
                 LogSWD.e("Collection have not been init");
             } else {
                 LogSWD.i(dbo.get("username") + " " + dbo.get("password"));
-                Users u = new Users(dbo);
+                User u = new User(dbo);
                 if (u != null) {
                     LogSWD.i(u.toString());
                 }
