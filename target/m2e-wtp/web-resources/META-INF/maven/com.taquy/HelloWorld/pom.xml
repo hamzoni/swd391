@@ -47,25 +47,6 @@
 		</dependency>
 
 		<!-- DucHT4: Dependency for config Hiberante OGM (framework for mongodb) -->
-		<dependency>
-			<groupId>org.hibernate.ogm</groupId>
-			<artifactId>hibernate-ogm-bom</artifactId>
-			<version>5.3.1.Final</version>
-			<type>pom</type>
-			<scope>import</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate.ogm</groupId>
-			<artifactId>hibernate-ogm-infinispan</artifactId>
-			<version>5.3.1.Final</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>1.0.2.Final</version>
-		</dependency>
 		
 	</dependencies>
 

@@ -11,7 +11,7 @@ package common;
  */
 public class Key {
 
-    public static String Name = "Name";
+    public static String Name = "name";
     public static String Username = "username";
     public static String Password = "password";
 
