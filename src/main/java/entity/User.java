@@ -16,17 +16,17 @@ import common.Key;
  * @author Duc
  */
 
-//@Entity
-//@Table(name = "Users")
+@Entity
+@Table(name = "Users")
 public class User {
 
-//	@Column(name = "name")
+	@Column(name = "name")
 	private String name;
 	
-//	@Column(name = "username")
+	@Column(name = "username")
 	private String username;
 	
-//	@Column(name = "password")
+	@Column(name = "password")
 	private String password;
 
 	public User() {

@@ -19,14 +19,18 @@ import entity.User;
  */
 public class GetDataFromMongoDBExample {
 
+	private static MongoClient mongoClient;
+
 	public static void main(String[] args) {
 		try {
-			// Connect to db
-			MongoClient mongoClient = new MongoClient(AppConfig.host, AppConfig.port);
+			
+			mongoClient = new MongoClient(AppConfig.host, AppConfig.port);
+			@SuppressWarnings("deprecation")
 			DB db = mongoClient.getDB(AppConfig.dbName);
 			LogSWD.d("Connected to DB");
 
-			// Get data, now Users have username, password and name (Users table called
+			// Get data, now Users have username, password and name (Users table
+			// called
 			// collection in Mongodb )
 			DBCollection userCollection = db.getCollection("Users");
 
@@ -43,6 +47,7 @@ public class GetDataFromMongoDBExample {
 					LogSWD.i(u.toString());
 				}
 			}
+			
 		} catch (Exception e) {
 			LogSWD.e(e.getLocalizedMessage());
 		}
