@@ -10,20 +10,20 @@
 	<properties>
 		<org.springframework.version>5.0.7.RELEASE</org.springframework.version>
 	</properties>
-	
-<build>
-    <plugins>
-        <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-        </configuration>
-    </plugin>
-    </plugins>
-</build>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<!-- QuyTa: Support Spring MVC -->
 		<dependency>
@@ -61,25 +61,25 @@
 
 		<!-- DucHT4: Dependency for config Hiberante OGM (framework for mongodb) -->
 		<dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-bom</artifactId>
-            <version>5.3.1.Final</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
+			<groupId>org.hibernate.ogm</groupId>
+			<artifactId>hibernate-ogm-bom</artifactId>
+			<version>5.3.1.Final</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-infinispan</artifactId>
-            <version>5.3.1.Final</version>
-        </dependency>
+		<dependency>
+			<groupId>org.hibernate.ogm</groupId>
+			<artifactId>hibernate-ogm-infinispan</artifactId>
+			<version>5.3.1.Final</version>
+		</dependency>
 
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.1-api</artifactId>
-            <version>1.0.2.Final</version>
-        </dependency>
-		
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>1.0.2.Final</version>
+		</dependency>
+
 	</dependencies>
 
 </project>

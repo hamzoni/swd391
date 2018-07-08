@@ -31,7 +31,7 @@ public class HomeController {
 	@RequestMapping(value = "/login/check", method = RequestMethod.POST)
 	public ModelAndView checkLogin(ModelMap model, @RequestParam("username") String username,
 			@RequestParam("password") String password) {
-		User user = null;
+		User user = new User();
 //		User user = DB.user.login(username, password);
 //		model.addAttribute(user);
 
