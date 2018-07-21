@@ -1,5 +1,6 @@
 package com.fpt.entity;
 
+import org.springframework.data.annotation.Id;
 /**
  * 
  * @author TungLT25
@@ -9,10 +10,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Users")
 public class Users {
-
+	@Id
+	private String id;
 	private String name;
-
+	private String username;
 	private String password;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
@@ -20,6 +30,14 @@ public class Users {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
