@@ -37,7 +37,7 @@ public class UserController {
 			@RequestParam(value = "password") String password) {
 		return new ResponseEntity<>(userService.login(user, password), HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/login2", method = RequestMethod.GET)
 	public ResponseEntity<Users> login2(@PathVariable(value = "username") String user,
 			@PathVariable(value = "password") String password) {
