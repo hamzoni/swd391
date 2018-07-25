@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import com.fpt.service.UserService;
  */
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/users")
 public class UserController {
 
@@ -40,7 +42,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/login2", method = RequestMethod.GET)
-	public ResponseEntity<Users> login2(@RequestBody String user, @RequestBody String password) {
-		return new ResponseEntity<>(userService.login(user, password), HttpStatus.OK);
+	public ResponseEntity<Users> login2(@RequestBody Users user) {
+		return new ResponseEntity<>(userService.login(user.getUsername(), user.getPassword()), HttpStatus.OK);
 	}
 }
