@@ -1,6 +1,5 @@
 package com.fpt.entity;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * 
@@ -12,8 +11,8 @@ public class Documents {
 	private String title;
 	private String description;
 	private String authorId;
-	private File content;
 	private String status;
+	private File content;
 
 	public Documents() {
 		super();
